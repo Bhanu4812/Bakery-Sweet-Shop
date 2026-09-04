@@ -337,4 +337,29 @@
             button.setAttribute("aria-expanded", open);
         }),
     );
+
+    const fadeUpSections = document.querySelectorAll("main > section:not(.hero)");
+    if (fadeUpSections.length) {
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+            fadeUpSections.forEach((section) => section.classList.add("fade-up-visible"));
+        } else {
+            const sectionObserver = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add("fade-up-visible");
+                        observer.unobserve(entry.target);
+                    });
+                },
+                { threshold: 0.12, rootMargin: "0px 0px -48px" },
+            );
+
+            fadeUpSections.forEach((section) => {
+                section.classList.add("fade-up-section");
+                sectionObserver.observe(section);
+            });
+        }
+    }
 })();
