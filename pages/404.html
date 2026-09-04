@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Page Not Found | Sweet Crumbs</title>
+        <meta name="description" content="The page you requested could not be found." />
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body data-page="404">
+        <div class="utility-page-controls" aria-label="Display preferences">
+            <button class="icon-btn" data-theme-toggle aria-label="Use dark theme">
+                <i class="bi bi-moon" aria-hidden="true"></i>
+            </button>
+            <button
+                class="icon-btn"
+                data-direction-toggle
+                aria-label="Switch to right-to-left layout"
+            >
+                <i class="bi bi-text-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <main id="main" class="utility-page error-page">
+            <div class="utility-page-shell">
+                <div class="error-layout">
+                    <div class="error-content">
+                        <div class="error-code" aria-hidden="true">404</div>
+                        <h1>Oops! Page not found</h1>
+                        <p>
+                            The page you're looking for doesn't exist or may have moved. Let's get
+                            you back to something delicious.
+                        </p>
+                        <div class="button-row">
+                            <a class="btn btn-primary" href="index.html">Go Home</a>
+                            <button class="btn btn-secondary" type="button" onclick="history.back()">
+                                Back
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="error-visual" aria-label="Sweet Crumbs signature kaju katli">
+                        <span class="utility-shape" aria-hidden="true"></span>
+                        <img
+                            src="../assets/images/products/traditional-sweets/kaju-katli.webp"
+                            alt="Silver-topped kaju katli arranged on a plate"
+                            width="768"
+                            height="512"
+                        />
+                        <p>We'll help you find your way back to your favourite treats.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

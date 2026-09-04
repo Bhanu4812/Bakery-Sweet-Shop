@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Bulk & Corporate Orders | Sweet Crumbs</title>
+        <meta
+            name="description"
+            content="Plan dependable sweet boxes, bakery treats and customised gifting for companies, weddings and events."
+        />
+        <link rel="canonical" href="https://example.com/pages/bulk-orders.html" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body data-page="bulk">
+        <div data-site-header></div>
+        <main id="main">
+            <header class="page-hero">
+                <div class="container">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a><span>Bulk Orders</span>
+                    </nav>
+                    <h1>Large Orders, Thoughtfully Managed</h1>
+                    <p class="lead">
+                        From sample selection to final delivery, we keep celebration and corporate
+                        gifting clear and dependable.
+                    </p>
+                </div>
+            </header>
+            <section class="section">
+                <div class="container">
+                    <div class="grid grid-4">
+                        <div class="feature">
+                            <h2>Corporate Gifting</h2>
+                            <p>Polished assortments for clients and teams.</p>
+                        </div>
+                        <div class="feature">
+                            <h2>Weddings</h2>
+                            <p>Consistent guest boxes with personal details.</p>
+                        </div>
+                        <div class="feature">
+                            <h2>Festivals</h2>
+                            <p>Fresh, timely gifting at any thoughtful scale.</p>
+                        </div>
+                        <div class="feature">
+                            <h2>Events</h2>
+                            <p>Individually packed treats for easy service.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-soft">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="eyebrow">How It Works</span>
+                        <h2>A Clear Path From Idea to Delivery</h2>
+                    </div>
+                    <div class="grid grid-3 steps">
+                        <article class="step">
+                            <h3>Share Your Brief</h3>
+                            <p>Tell us the occasion, quantity, budget and preferred date.</p>
+                        </article>
+                        <article class="step">
+                            <h3>Approve Your Selection</h3>
+                            <p>Confirm flavours, packaging and personalisation details.</p>
+                        </article>
+                        <article class="step">
+                            <h3>We Prepare & Deliver</h3>
+                            <p>Your order is prepared fresh and coordinated carefully.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container hero-grid">
+                    <div>
+                        <span class="eyebrow">Built Around Your Occasion</span>
+                        <h2>Custom Packaging Without the Fuss</h2>
+                        <p>
+                            Choose box formats, assortment balance, message cards and branded
+                            sleeves. We'll advise what works best for your quantity and timeline.
+                        </p>
+                        <ul class="check-list">
+                            <li>Flexible assortment planning</li>
+                            <li>Brand or event colour direction</li>
+                            <li>Clear lead times and milestones</li>
+                        </ul>
+                    </div>
+                    <img
+                        class="editorial-img"
+                        src="../assets/images/gift-boxes/festive-collection.webp"
+                        alt="Bulk gift boxes with custom ribbon"
+                    />
+                </div>
+            </section>
+            <section class="section section-soft" id="bulk-enquiry">
+                <div class="container grid grid-2 align-center">
+                    <div>
+                        <span class="eyebrow">Start Your Enquiry</span>
+                        <h2>Tell Us What You're Planning</h2>
+                        <p>
+                            Share the essentials and we'll respond with practical options. This demo
+                            form does not send data until you connect an endpoint.
+                        </p>
+                    </div>
+                    <form class="card form-card" data-validate novalidate>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="bulk-name">Full Name</label
+                                ><input
+                                    class="form-control"
+                                    id="bulk-name"
+                                    name="name"
+                                    required
+                                /><small class="error" data-error="name"></small>
+                            </div>
+                            <div class="field">
+                                <label for="bulk-phone">Phone</label
+                                ><input
+                                    class="form-control"
+                                    id="bulk-phone"
+                                    name="phone"
+                                    type="tel"
+                                    required
+                                /><small class="error" data-error="phone"></small>
+                            </div>
+                            <div class="field">
+                                <label for="bulk-email">Email</label
+                                ><input
+                                    class="form-control"
+                                    id="bulk-email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                /><small class="error" data-error="email"></small>
+                            </div>
+                            <div class="field">
+                                <label for="bulk-type">Occasion</label
+                                ><select
+                                    class="form-control"
+                                    id="bulk-type"
+                                    name="occasion"
+                                    required
+                                >
+                                    <option value="">Select</option>
+                                    <option>Corporate Gifting</option>
+                                    <option>Wedding</option>
+                                    <option>Festival</option>
+                                    <option>Family Function</option>
+                                    <option>Event</option></select
+                                ><small class="error" data-error="occasion"></small>
+                            </div>
+                            <div class="field">
+                                <label for="bulk-qty">Approximate Quantity</label
+                                ><input
+                                    class="form-control"
+                                    id="bulk-qty"
+                                    name="quantity"
+                                    type="number"
+                                    min="10"
+                                    required
+                                /><small class="error" data-error="quantity"></small>
+                            </div>
+                            <div class="field">
+                                <label for="bulk-date">Preferred Date</label
+                                ><input
+                                    class="form-control"
+                                    id="bulk-date"
+                                    name="date"
+                                    type="date"
+                                    required
+                                /><small class="error" data-error="date"></small>
+                            </div>
+                            <div class="field full">
+                                <label for="bulk-message">Requirements</label
+                                ><textarea
+                                    class="form-control"
+                                    id="bulk-message"
+                                    name="message"
+                                    required
+                                ></textarea
+                                ><small class="error" data-error="message"></small>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Request a Bulk Order</button>
+                        <div class="form-status" tabindex="-1">
+                            Thank you. Your demo enquiry is ready; connect Formspree or Netlify
+                            Forms to receive submissions.
+                        </div>
+                        <!-- Integration: add your Formspree action or Netlify form attributes here. -->
+                    </form>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="eyebrow">Questions</span>
+                        <h2>Bulk Order FAQ</h2>
+                    </div>
+                    <div>
+                        <article class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                How early should bulk orders be placed?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Two to four weeks is ideal; larger customised orders may need
+                                    more time.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Can I customize the assortment?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Yes. We'll help balance flavours, dietary preferences and
+                                    budget.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Can packaging be personalized?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Message cards, sleeves, ribbons and selected box colours can be
+                                    customised.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Is delivery available for large orders?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Delivery options depend on location, quantity and date; ask us
+                                    when enquiring.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div data-site-footer></div>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/form-validation.js"></script>
+    </body>
+</html>

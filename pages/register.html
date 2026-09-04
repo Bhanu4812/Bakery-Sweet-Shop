@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Register | Sweet Crumbs Bakery &amp; Mithai</title>
+        <meta name="description" content="Create your Sweet Crumbs Bakery account." />
+        <meta name="robots" content="noindex,follow" />
+        <link rel="canonical" href="https://example.com/pages/register.html" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body data-page="register">
+        <div data-site-header></div>
+        <main id="main">
+            <header class="page-hero auth-page-hero">
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a><span>Register</span>
+                    </nav>
+                    <h1>Create Your Account</h1>
+                    <p class="lead">
+                        Register to make enquiries and keep your bakery details ready for future
+                        requests.
+                    </p>
+                </div>
+            </header>
+            <section class="section auth-section">
+                <div class="container auth-layout auth-layout-register">
+                    <aside class="auth-visual" aria-label="Sweet Crumbs bakery counter">
+                        <img
+                            src="../assets/images/common/contact-banner.webp"
+                            alt="A warm and welcoming bakery counter"
+                        />
+                        <div class="auth-visual-copy">
+                            <span class="eyebrow">A Warmer Welcome</span>
+                            <h2>Keep your details ready for future bakery requests.</h2>
+                        </div>
+                    </aside>
+                    <div class="card auth-card">
+                        <div class="section-header">
+                            <span class="eyebrow">Join Sweet Crumbs</span>
+                            <h2>Register</h2>
+                            <p>Create your demo bakery account.</p>
+                        </div>
+                        <div class="social-auth" aria-label="Social registration options">
+                            <button class="social-auth-btn" type="button" data-social-auth="google">
+                                <i class="bi bi-google" aria-hidden="true"></i
+                                ><span>Continue with Google</span>
+                            </button>
+                            <button class="social-auth-btn" type="button" data-social-auth="apple">
+                                <i class="bi bi-apple" aria-hidden="true"></i
+                                ><span>Continue with Apple</span>
+                            </button>
+                        </div>
+                        <div class="auth-divider"><span>or register with email</span></div>
+                        <form data-validate data-auth-form="register" novalidate>
+                            <div class="form-grid">
+                                <div class="field full">
+                                    <label for="register-name">Full Name</label
+                                    ><input
+                                        class="form-control"
+                                        id="register-name"
+                                        name="name"
+                                        autocomplete="name"
+                                        required
+                                        aria-describedby="register-name-error"
+                                    /><small
+                                        class="error"
+                                        id="register-name-error"
+                                        data-error="name"
+                                    ></small>
+                                </div>
+                                <div class="field">
+                                    <label for="register-email">Email Address</label
+                                    ><input
+                                        class="form-control"
+                                        id="register-email"
+                                        name="email"
+                                        type="email"
+                                        autocomplete="email"
+                                        required
+                                        aria-describedby="register-email-error"
+                                    /><small
+                                        class="error"
+                                        id="register-email-error"
+                                        data-error="email"
+                                    ></small>
+                                </div>
+                                <div class="field">
+                                    <label for="register-phone">Phone Number</label
+                                    ><input
+                                        class="form-control"
+                                        id="register-phone"
+                                        name="phone"
+                                        type="tel"
+                                        autocomplete="tel"
+                                        required
+                                        aria-describedby="register-phone-error"
+                                    /><small
+                                        class="error"
+                                        id="register-phone-error"
+                                        data-error="phone"
+                                    ></small>
+                                </div>
+                                <div class="field">
+                                    <label for="register-password">Password</label>
+                                    <div class="password-field">
+                                        <input
+                                            class="form-control"
+                                            id="register-password"
+                                            name="password"
+                                            type="password"
+                                            minlength="8"
+                                            autocomplete="new-password"
+                                            required
+                                            aria-describedby="register-password-help register-password-error"
+                                        /><button
+                                            class="password-toggle"
+                                            type="button"
+                                            data-password-toggle
+                                            aria-controls="register-password"
+                                            aria-label="Show password"
+                                        >
+                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <small class="field-help" id="register-password-help"
+                                        >Use at least 8 characters.</small
+                                    ><small
+                                        class="error"
+                                        id="register-password-error"
+                                        data-error="password"
+                                    ></small>
+                                </div>
+                                <div class="field">
+                                    <label for="confirm-password">Confirm Password</label>
+                                    <div class="password-field">
+                                        <input
+                                            class="form-control"
+                                            id="confirm-password"
+                                            name="confirmPassword"
+                                            type="password"
+                                            minlength="8"
+                                            autocomplete="new-password"
+                                            required
+                                            aria-describedby="confirm-password-error"
+                                        /><button
+                                            class="password-toggle"
+                                            type="button"
+                                            data-password-toggle
+                                            aria-controls="confirm-password"
+                                            aria-label="Show password"
+                                        >
+                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <small
+                                        class="error"
+                                        id="confirm-password-error"
+                                        data-error="confirmPassword"
+                                    ></small>
+                                </div>
+                                <div class="field full">
+                                    <label class="check-control"
+                                        ><input
+                                            type="checkbox"
+                                            name="terms"
+                                            required
+                                            aria-describedby="register-terms-error"
+                                        />
+                                        <span>I agree to the Terms and Privacy notice.</span></label
+                                    ><small
+                                        class="error"
+                                        id="register-terms-error"
+                                        data-error="terms"
+                                    ></small
+                                    ><!-- TODO: link your published Terms and Privacy pages here. -->
+                                </div>
+                            </div>
+                            <button class="btn btn-primary auth-submit" type="submit">
+                                Create Account
+                            </button>
+                            <div class="form-status" tabindex="-1">
+                                Demo registration validated successfully. Connect your
+                                authentication backend here.
+                            </div>
+                            <!-- Backend integration: submit registration data to your secure authentication service here. -->
+                        </form>
+                        <!-- OAuth integration: connect the Google and Apple buttons to your authentication provider. -->
+                        <p class="auth-switch">
+                            Already have an account? <a href="login.html">Sign in</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div data-site-footer></div>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/form-validation.js"></script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Coming Soon | Sweet Crumbs</title>
+        <meta
+            name="description"
+            content="Sweet Crumbs is preparing something fresh. Join the update list."
+        />
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body>
+        <div class="utility-page-controls" aria-label="Display preferences">
+            <button class="icon-btn" data-theme-toggle aria-label="Use dark theme">
+                <i class="bi bi-moon" aria-hidden="true"></i>
+            </button>
+            <button
+                class="icon-btn"
+                data-direction-toggle
+                aria-label="Switch to right-to-left layout"
+            >
+                <i class="bi bi-text-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <main id="main" class="utility-page soon-page">
+            <div class="utility-page-shell">
+                <div class="soon-layout">
+                    <div class="soon-content">
+                        <span class="utility-kicker">Coming Soon</span>
+                        <h1>We're preparing something amazing</h1>
+                        <p>
+                            Our ovens are warming and the finishing touches are underway. Stay tuned
+                            for a sweeter Sweet Crumbs experience.
+                        </p>
+
+                        <div
+                            class="launch-countdown"
+                            data-launch-countdown
+                            role="timer"
+                            aria-label="30-day launch countdown"
+                            aria-live="off"
+                        >
+                            <div><strong data-countdown-days>30</strong><span>Days</span></div>
+                            <div><strong data-countdown-hours>00</strong><span>Hours</span></div>
+                            <div><strong data-countdown-minutes>00</strong><span>Minutes</span></div>
+                        </div>
+
+                        <form class="newsletter utility-newsletter" data-validate novalidate>
+                            <div class="newsletter-field">
+                                <label for="soon-email">Email address</label>
+                                <input
+                                    class="form-control"
+                                    id="soon-email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                />
+                                <small class="error" data-error="email"></small>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Notify Me</button>
+                            <div class="form-status" tabindex="-1">
+                                You're on the demo list. Connect a form endpoint to save emails.
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="soon-visual">
+                        <img
+                            src="../assets/images/home-1/bakery-hero.webp"
+                            alt="Fresh breads, pastries and traditional sweets at Sweet Crumbs"
+                            width="1536"
+                            height="1024"
+                        />
+                        <div class="soon-visual-card">
+                            <span class="eyebrow">Launching Soon</span>
+                            <h2>Fresh traditions, beautifully made.</h2>
+                            <p>Small-batch sweets, warm bakes and thoughtful gifting in one place.</p>
+                            <div class="soon-badges">
+                                <span><i class="bi bi-patch-check" aria-hidden="true"></i> Handcrafted</span>
+                                <span><i class="bi bi-clock" aria-hidden="true"></i> Baked fresh</span>
+                                <span><i class="bi bi-heart" aria-hidden="true"></i> Made with care</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/form-validation.js"></script>
+    </body>
+</html>

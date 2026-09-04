@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Contact & Custom Orders | Sweet Crumbs</title>
+        <meta
+            name="description"
+            content="Contact Sweet Crumbs to plan custom sweets, bakery orders, festive boxes and event gifting."
+        />
+        <link rel="canonical" href="https://example.com/pages/contact.html" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body data-page="contact">
+        <div data-site-header></div>
+        <main id="main">
+            <header class="page-hero">
+                <div class="container">
+                    <nav class="breadcrumb"><a href="index.html">Home</a><span>Contact</span></nav>
+                    <h1>Let's Plan Something Sweet</h1>
+                    <p class="lead">
+                        Tell us what you have in mind, from a family cake to a beautifully packed
+                        celebration.
+                    </p>
+                </div>
+            </header>
+            <section class="section" id="custom-order">
+                <div class="container grid grid-2">
+                    <div>
+                        <span class="eyebrow">Visit or Get in Touch</span>
+                        <h2>We'd Love to Hear From You</h2>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="feature-icon"
+                                    ><i class="bi bi-geo-alt" aria-hidden="true"></i
+                                ></span>
+                                <p>
+                                    <strong>Address</strong>12 Market Lane, Your City, State 000000
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="feature-icon"
+                                    ><i class="bi bi-telephone" aria-hidden="true"></i
+                                ></span>
+                                <p>
+                                    <strong>Phone</strong
+                                    ><a href="tel:+00000000000">+00 00000 00000</a>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="feature-icon"
+                                    ><i class="bi bi-envelope" aria-hidden="true"></i
+                                ></span>
+                                <p>
+                                    <strong>Email</strong
+                                    ><a href="mailto:hello@example.com">hello@example.com</a>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="feature-icon"
+                                    ><i class="bi bi-clock" aria-hidden="true"></i
+                                ></span>
+                                <p>
+                                    <strong>Opening Hours</strong>Monday - Saturday: 9 AM - 9 PM<br />Sunday:
+                                    10 AM-8 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="card form-card" data-validate novalidate>
+                        <h2>Custom Order Enquiry</h2>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="name">Full Name</label
+                                ><input class="form-control" id="name" name="name" required /><small
+                                    class="error"
+                                    data-error="name"
+                                ></small>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone</label
+                                ><input
+                                    class="form-control"
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    required
+                                /><small class="error" data-error="phone"></small>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label
+                                ><input
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                /><small class="error" data-error="email"></small>
+                            </div>
+                            <div class="field">
+                                <label for="order-type">Order Type</label
+                                ><select
+                                    class="form-control"
+                                    id="order-type"
+                                    name="orderType"
+                                    required
+                                >
+                                    <option value="">Select</option>
+                                    <option>Traditional Sweets</option>
+                                    <option>Bakery Order</option>
+                                    <option>Festive Gift Box</option>
+                                    <option>Bulk Order</option>
+                                    <option>Custom Request</option></select
+                                ><small class="error" data-error="orderType"></small>
+                            </div>
+                            <div class="field">
+                                <label for="date">Preferred Date</label
+                                ><input
+                                    class="form-control"
+                                    id="date"
+                                    name="date"
+                                    type="date"
+                                    required
+                                /><small class="error" data-error="date"></small>
+                            </div>
+                            <div class="field">
+                                <label for="quantity">Approximate Quantity</label
+                                ><input
+                                    class="form-control"
+                                    id="quantity"
+                                    name="quantity"
+                                    required
+                                /><small class="error" data-error="quantity"></small>
+                            </div>
+                            <div class="field full">
+                                <label for="message">Message</label
+                                ><textarea
+                                    class="form-control"
+                                    id="message"
+                                    name="message"
+                                    required
+                                ></textarea
+                                ><small class="error" data-error="message"></small>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Send Enquiry</button>
+                        <div class="form-status" tabindex="-1">
+                            Thank you! Your demo enquiry has been validated. Connect a form endpoint
+                            to receive it.
+                        </div>
+                        <!-- Integration: configure Formspree or Netlify Forms here. -->
+                    </form>
+                </div>
+            </section>
+            <section class="section section-soft">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="eyebrow">Find Us</span>
+                        <h2>Bakery Location</h2>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            title="Map showing Sweet Crumbs bakery location"
+                            loading="lazy"
+                            src="https://www.google.com/maps?q=New+Delhi,+India&output=embed"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container grid grid-2">
+                    <div>
+                        <span class="eyebrow">Opening Hours</span>
+                        <h2>Stop By for Something Fresh</h2>
+                        <p><strong>Monday - Saturday</strong><br />9:00 AM - 9:00 PM</p>
+                        <p><strong>Sunday</strong><br />10:00 AM - 8:00 PM</p>
+                        <!-- Replace these demo hours with your bakery schedule. -->
+                    </div>
+                    <div>
+                        <div class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                How early should I place a custom order?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Three to seven days is helpful; larger orders need more notice.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Do you offer pickup and delivery?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>Yes, based on location and availability.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Can I customize gift boxes?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>
+                                    Yes, including assortment, note and selected packaging details.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button" aria-expanded="false">
+                                Do you accept large event orders?<span>+</span>
+                            </button>
+                            <div class="accordion-panel">
+                                <p>Yes. Visit our bulk-orders page to begin planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div data-site-footer></div>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/form-validation.js"></script>
+    </body>
+</html>

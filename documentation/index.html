@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Sweet Crumbs Documentation</title>
+        <style>
+            body {
+                margin: 0;
+                font:
+                    16px/1.7 Arial,
+                    sans-serif;
+                color: #2d211c;
+                background: #fffaf2;
+            }
+            .wrap {
+                width: min(900px, calc(100% - 32px));
+                margin: auto;
+                padding: 48px 0;
+            }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                padding: 16px 0;
+                border-bottom: 1px solid #e8ddd2;
+            }
+            a {
+                color: #7a2636;
+            }
+            section {
+                padding: 28px 0;
+                border-bottom: 1px solid #e8ddd2;
+            }
+            code,
+            pre {
+                background: #f7efe2;
+                padding: 3px 6px;
+                border-radius: 5px;
+            }
+            pre {
+                padding: 16px;
+                overflow: auto;
+            }
+            h1,
+            h2 {
+                font-family: Georgia, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="wrap">
+            <h1>Sweet Crumbs Template Documentation</h1>
+            <p>A simple guide to editing and publishing the Bakery & Sweet Shop template.</p>
+            <nav>
+                <a href="#structure">Files</a><a href="#html">HTML</a><a href="#css">CSS</a
+                ><a href="#js">JavaScript</a><a href="#forms">Forms</a
+                ><a href="#theme">Theme & RTL</a><a href="#accessibility">Accessibility</a>
+            </nav>
+            <section>
+                <h2>Introduction</h2>
+                <p>
+                    The template is static HTML5, CSS3 and vanilla JavaScript. No build process is
+                    required.
+                </p>
+            </section>
+            <section id="structure">
+                <h2>File Structure</h2>
+                <pre>
+pages/          Website pages
+assets/css/     Shared styles
+assets/js/      Interactions and validation
+assets/images/  Organised image assets
+documentation/  This guide</pre
+                >
+            </section>
+            <section id="html">
+                <h2>HTML Structure</h2>
+                <p>
+                    Each page contains one main landmark and one H1. Shared header and footer markup
+                    is inserted by <code>main.js</code>.
+                </p>
+            </section>
+            <section id="css">
+                <h2>CSS Structure</h2>
+                <p>
+                    <code>style.css</code> contains tokens and components,
+                    <code>responsive.css</code> contains breakpoints,
+                    <code>dark-mode.css</code> handles dark states, and <code>rtl.css</code> handles
+                    direction.
+                </p>
+                <h3>Changing Colors</h3>
+                <p>
+                    Edit the custom properties in <code>:root</code> at the beginning of
+                    <code>style.css</code>.
+                </p>
+                <h3>Changing Fonts</h3>
+                <p>
+                    Update the two font variables. Place licensed local files in
+                    <code>assets/fonts</code>.
+                </p>
+                <h3>Replacing Images</h3>
+                <p>
+                    Replace images within their category folders and preserve useful alt
+                    descriptions.
+                </p>
+            </section>
+            <section id="js">
+                <h2>JavaScript</h2>
+                <p>
+                    <code>main.js</code> provides navigation, theme, filters and accordions.
+                    <code>form-validation.js</code> provides inline demo validation.
+                </p>
+            </section>
+            <section id="forms">
+                <h2>Forms</h2>
+                <p>
+                    Forms do not transmit data. Configure Formspree or Netlify Forms where comments
+                    indicate.
+                </p>
+                <h3>Google Maps</h3>
+                <p>
+                    Replace the demo iframe URL in <code>contact.html</code> with your business
+                    embed URL.
+                </p>
+            </section>
+            <section id="theme">
+                <h2>Dark Mode</h2>
+                <p>
+                    The toggle stores <code>sweetcrumbs-theme</code> and initially follows the
+                    device preference.
+                </p>
+                <h2>RTL</h2>
+                <p>
+                    Add <code>dir="rtl"</code> to the HTML element. Logical CSS properties are used
+                    throughout.
+                </p>
+            </section>
+            <section id="accessibility">
+                <h2>Accessibility</h2>
+                <p>
+                    Retain labels, heading order, focus styles, ARIA states and meaningful alt text.
+                    Verify contrast after changing colours.
+                </p>
+            </section>
+            <section>
+                <h2>Credits</h2>
+                <p>Demo imagery was generated for this template.</p>
+                <h2>Support</h2>
+                <p>Replace this text with your commercial support email and policy.</p>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,301 @@
+[data-theme="dark"] {
+    --brand-primary: #d86c82;
+    --brand-primary-hover: #eb8196;
+    --brand-soft: rgba(132, 38, 58, 0.22);
+    --page-bg: #151210;
+    --surface-bg: #27201c;
+    --surface-secondary: #302722;
+    --bg: #171311;
+    --bg-2: #1e1916;
+    --surface: #29211d;
+    --primary: var(--brand-primary);
+    --primary-dark: var(--brand-primary-hover);
+    --accent: var(--brand-primary);
+    --accent-soft: var(--brand-soft);
+    --text: #f8f1ea;
+    --text-2: #d8c9be;
+    --muted: #ad9d92;
+    --border: #473a32;
+    --heading-color: #fff8f1;
+    --body-color: #d8c9be;
+    --muted-color: #ad9d92;
+    --surface-color: #29211d;
+    --border-color: #473a32;
+    --icon-color: var(--brand-primary);
+    --icon-bg: var(--brand-soft);
+    --shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+[data-theme="dark"] body {
+    color: var(--body-color);
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--heading-color);
+}
+[data-theme="dark"] p {
+    color: var(--body-color);
+}
+[data-theme="dark"] a {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] a:hover {
+    color: var(--brand-primary-hover);
+}
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .dropdown-toggle,
+[data-theme="dark"] .mobile-nav a,
+[data-theme="dark"] .mobile-home-toggle {
+    color: #e8ddd5;
+}
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .dropdown-toggle:hover,
+[data-theme="dark"] .dropdown-toggle.active {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .mobile-nav {
+    background: #312720;
+    border-color: var(--border-color);
+}
+[data-theme="dark"] .dropdown-menu a {
+    color: #eadfd7;
+}
+[data-theme="dark"] .dropdown-menu a:hover {
+    background: var(--brand-soft);
+    color: var(--brand-primary-hover);
+}
+[data-theme="dark"] .card,
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .accordion-item,
+[data-theme="dark"] .split-panel {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .product-card h2,
+[data-theme="dark"] .product-card h3 {
+    color: var(--heading-color);
+}
+[data-theme="dark"] .card p,
+[data-theme="dark"] .product-card p {
+    color: var(--body-color);
+}
+[data-theme="dark"] .tag,
+[data-theme="dark"] .badge,
+[data-theme="dark"] .product-badge {
+    background: var(--brand-soft);
+    color: var(--brand-primary-hover);
+    border: 1px solid rgba(216, 108, 130, 0.28);
+}
+[data-theme="dark"] .eyebrow {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] .feature {
+    border-inline-start-color: var(--brand-primary);
+}
+[data-theme="dark"] .feature h3 {
+    color: var(--heading-color);
+}
+[data-theme="dark"] .feature p {
+    color: var(--body-color);
+}
+[data-theme="dark"] .feature-icon {
+    background: var(--icon-bg);
+    color: var(--icon-color);
+    border-color: rgba(216, 108, 130, 0.25);
+}
+[data-theme="dark"] .testimonial-text {
+    color: #fff7ef;
+}
+[data-theme="dark"] .testimonial-author strong {
+    color: #f4ece5;
+}
+[data-theme="dark"] .testimonial-author span,
+[data-theme="dark"] .quote cite {
+    color: #cbb9ae;
+}
+[data-theme="dark"] .product-card a {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] .product-card a:hover {
+    color: var(--brand-primary-hover);
+}
+[data-theme="dark"] .btn-primary {
+    background: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #fff;
+}
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--brand-primary-hover);
+    border-color: var(--brand-primary-hover);
+    color: #fff;
+}
+[data-theme="dark"] .btn-secondary {
+    color: #f4ece5;
+    border-color: #6a584e;
+}
+[data-theme="dark"] .btn-secondary:hover {
+    background: #312720;
+    color: #fff;
+}
+[data-theme="dark"] .cta .btn-primary {
+    background: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #fff;
+}
+[data-theme="dark"] .cta .btn-secondary {
+    color: #fff;
+    border-color: #fff;
+}
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background: #221c19;
+    border-color: #4a3e37;
+    color: #f7eee7;
+    color-scheme: dark;
+}
+[data-theme="dark"] .form-control::placeholder {
+    color: #9e8f85;
+    opacity: 1;
+}
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background: #251f1b;
+    color: #fff;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(216, 108, 130, 0.15);
+}
+[data-theme="dark"] label {
+    color: #e6dad2;
+}
+[data-theme="dark"] .filter-btn {
+    background: #29211d;
+    border-color: #4a3e37;
+    color: #e8ddd5;
+}
+[data-theme="dark"] .filter-btn.active {
+    background: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #fff;
+}
+[data-theme="dark"] .accordion-button {
+    color: var(--heading-color);
+}
+[data-theme="dark"] .breadcrumb,
+[data-theme="dark"] .proofs {
+    color: var(--body-color);
+}
+[data-theme="dark"] .icon-btn,
+[data-theme="dark"] .menu-btn {
+    background: #29211d;
+    border-color: #4a3e37;
+    color: #f4ece5;
+}
+[data-theme="dark"] .form-status {
+    background: #203c28;
+    color: #b9e4c3;
+}
+[data-theme="dark"] .error {
+    color: #ffaaa4;
+}
+[data-theme="dark"] .site-header.is-scrolled {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+}
+[data-theme="dark"] .site-header .nav-wrap {
+    background: #29211d;
+    border-color: #473a32;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+[data-theme="dark"] .site-header.is-scrolled {
+    box-shadow: none;
+}
+[data-theme="dark"] .site-header.is-scrolled .nav-wrap {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+}
+[data-theme="dark"] .auth-card {
+    background: #29211d;
+    border-color: #473a32;
+}
+[data-theme="dark"] .auth-card h2 {
+    color: #fff8f1;
+}
+[data-theme="dark"] .auth-card p,
+[data-theme="dark"] .field-help {
+    color: #d8c9be;
+}
+[data-theme="dark"] .password-toggle {
+    color: #d8c9be;
+}
+[data-theme="dark"] .password-toggle:hover {
+    background: #332923;
+    color: var(--brand-primary-hover);
+}
+[data-theme="dark"] .check-control {
+    color: #e6dad2;
+}
+[data-theme="dark"] .social-auth-btn {
+    background: #221c19;
+    border-color: #4a3e37;
+    color: #f7eee7;
+}
+[data-theme="dark"] .social-auth-btn:hover {
+    background: #312720;
+    border-color: var(--brand-primary);
+}
+[data-theme="dark"] .auth-divider::before,
+[data-theme="dark"] .auth-divider::after {
+    background: #473a32;
+}
+[data-theme="dark"] .section-label,
+[data-theme="dark"] .section-eyebrow,
+[data-theme="dark"] .product-category,
+[data-theme="dark"] .auth-visual-copy .eyebrow {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] .product-category {
+    background: var(--brand-soft);
+    border-color: rgba(216, 108, 130, 0.25);
+}
+[data-theme="dark"] .utility-page {
+    background:
+        radial-gradient(circle at 4% 8%, rgba(216, 108, 130, 0.12), transparent 28%),
+        radial-gradient(circle at 96% 92%, rgba(210, 154, 58, 0.1), transparent 30%),
+        var(--bg);
+}
+[data-theme="dark"] .error-visual,
+[data-theme="dark"] .launch-countdown > div {
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+[data-theme="dark"] .soon-visual-card {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(41, 33, 29, 0.9);
+}
+[data-theme="dark"] .mobile-nav a:hover,
+[data-theme="dark"] .mobile-nav a.active {
+    color: var(--brand-primary);
+}
+[data-theme="dark"] body[data-page="products"] .page-hero .breadcrumb a,
+[data-theme="dark"] body[data-page="gifts"] .page-hero .breadcrumb a,
+[data-theme="dark"] body[data-page="bulk"] .page-hero .breadcrumb a,
+[data-theme="dark"] body[data-page="contact"] .page-hero .breadcrumb a {
+    color: var(--brand-primary-hover);
+}
+[data-theme="dark"] .brand-mark {
+    background: var(--brand-primary);
+    color: #fff;
+}
+[data-theme="dark"] .about-hero {
+    background: var(--bg-2);
+    border-color: var(--border-color);
+}
+[data-theme="dark"] .journey-list li {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}

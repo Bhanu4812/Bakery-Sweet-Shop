@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Products | Sweet Crumbs Bakery & Mithai</title>
+        <meta
+            name="description"
+            content="Browse traditional sweets, baked goods, chocolates and premium dry fruit boxes."
+        />
+        <link rel="canonical" href="https://example.com/pages/products.html" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <script>
+            document.documentElement.dataset.theme =
+                localStorage.getItem("sweetcrumbs-theme") ||
+                (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+            document.documentElement.dir = localStorage.getItem("sweetcrumbs-direction") || "ltr";
+        </script>
+    </head>
+    <body data-page="products">
+        <div data-site-header></div>
+        <main id="main">
+            <header class="page-hero">
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a><span>Products</span>
+                    </nav>
+                    <h1>Fresh Favourites, Made With Care</h1>
+                    <p class="lead">
+                        Explore small-batch mithai, bakery comforts, artisan chocolates and premium
+                        dry fruits.
+                    </p>
+                </div>
+            </header>
+            <section class="section">
+                <div class="container">
+                    <div class="filter-bar" aria-label="Filter products">
+                        <button class="filter-btn active" data-filter="all">All Products</button
+                        ><button class="filter-btn" data-filter="traditional">
+                            Traditional Sweets</button
+                        ><button class="filter-btn" data-filter="bakery">Baked Goods</button
+                        ><button class="filter-btn" data-filter="chocolates">Chocolates</button
+                        ><button class="filter-btn" data-filter="dry">Dry Fruit Boxes</button>
+                    </div>
+                    <div class="grid grid-3">
+                        <article
+                            class="card product-card product-item"
+                            data-category="traditional"
+                            id="traditional"
+                        >
+                            <img
+                                class="card-img"
+                                src="../assets/images/products/traditional-sweets/kaju-katli.webp"
+                                alt="Kaju katli"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Traditional Sweets</span>
+                                <h2>Kaju Katli</h2>
+                                <p>
+                                    Fine cashew fudge with silver leaf. Available in 250 g and 500 g
+                                    packs.
+                                </p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article class="card product-card product-item" data-category="traditional">
+                            <img
+                                class="card-img"
+                                src="../assets/images/home-1/bakery-hero.webp"
+                                alt="Motichoor laddu"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Traditional Sweets</span>
+                                <h2>Motichoor Laddu</h2>
+                                <p>Soft saffron pearls finished with pistachio.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article
+                            class="card product-card product-item"
+                            data-category="bakery"
+                            id="bakery"
+                        >
+                            <img
+                                class="card-img"
+                                src="../assets/images/products/baked-goods/petit-pastries.webp"
+                                alt="Fresh pastries"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Baked Goods</span>
+                                <h2>Petit Pastries</h2>
+                                <p>Seasonal flavours, baked and finished each morning.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article class="card product-card product-item" data-category="bakery">
+                            <img
+                                class="card-img"
+                                src="../assets/images/home-1/bakery-hero.webp"
+                                alt="Artisan bakery bread"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Baked Goods</span>
+                                <h2>Artisan Bread</h2>
+                                <p>Slow-fermented loaves with a crisp golden crust.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article
+                            class="card product-card product-item"
+                            data-category="chocolates"
+                            id="chocolates"
+                        >
+                            <img
+                                class="card-img"
+                                src="../assets/images/products/chocolates/artisan-chocolates.webp"
+                                alt="Chocolate pralines"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Chocolates</span>
+                                <h2>Praline Collection</h2>
+                                <p>Hand-finished nut and caramel centres.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article class="card product-card product-item" data-category="chocolates">
+                            <img
+                                class="card-img"
+                                src="../assets/images/products/product-collection.webp"
+                                alt="Chocolate truffles"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Chocolates</span>
+                                <h2>Truffle Box</h2>
+                                <p>Dark, milk and white chocolate assortment.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article
+                            class="card product-card product-item"
+                            data-category="dry"
+                            id="dry-fruits"
+                        >
+                            <img
+                                class="card-img"
+                                src="../assets/images/products/dry-fruit-boxes/premium-dry-fruits.webp"
+                                alt="Premium dry fruits"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Dry Fruit Boxes</span>
+                                <h2>Signature Nut Box</h2>
+                                <p>Almonds, cashews, pistachios and walnuts.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                        <article class="card product-card product-item" data-category="dry">
+                            <img
+                                class="card-img"
+                                src="../assets/images/gift-boxes/festive-collection.webp"
+                                alt="Dry fruit gift box"
+                            />
+                            <div class="card-body">
+                                <span class="tag">Dry Fruit Boxes</span>
+                                <h2>Celebration Dry Fruit Box</h2>
+                                <p>A polished selection for gifting and hosting.</p>
+                                <a href="contact.html"
+                                    >Enquire <i class="bi bi-arrow-right" aria-hidden="true"></i
+                                ></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-soft">
+                <div class="container">
+                    <div class="section-header center">
+                        <span class="eyebrow">Helpful to Know</span>
+                        <h2>Freshness, Packing and Ordering</h2>
+                        <p>
+                            Simple guidance to help you choose the right treats and enjoy them at
+                            their best.
+                        </p>
+                    </div>
+                    <div class="grid grid-3">
+                        <article class="feature">
+                            <div class="feature-icon">
+                                <i class="bi bi-clock-history" aria-hidden="true"></i>
+                            </div>
+                            <h3>Prepared in Small Batches</h3>
+                            <p>
+                                Our sweets and bakes are prepared close to collection for dependable
+                                freshness.
+                            </p>
+                        </article>
+                        <article class="feature">
+                            <div class="feature-icon">
+                                <i class="bi bi-box-seam" aria-hidden="true"></i>
+                            </div>
+                            <h3>Packed for the Product</h3>
+                            <p>
+                                Each assortment is packed to protect texture, flavour and
+                                presentation.
+                            </p>
+                        </article>
+                        <article class="feature">
+                            <div class="feature-icon">
+                                <i class="bi bi-chat-heart" aria-hidden="true"></i>
+                            </div>
+                            <h3>Help Choosing</h3>
+                            <p>
+                                Tell us the occasion, serving size or preferences and we will
+                                suggest a balanced selection.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="cta">
+                        <div>
+                            <h2>Need a Custom Assortment?</h2>
+                            <p>Tell us what you love and how many people you're serving.</p>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html#custom-order"
+                            >Create an Order</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div data-site-footer></div>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

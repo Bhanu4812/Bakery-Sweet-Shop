@@ -1,0 +1,71 @@
+html[dir="rtl"] body {
+    text-align: right;
+}
+html[dir="rtl"] .dropdown-menu {
+    inset-inline-start: auto;
+    inset-inline-end: -18px;
+}
+html[dir="rtl"] .breadcrumb {
+    direction: rtl;
+}
+html[dir="rtl"] .button-row,
+.proofs,
+.filter-bar {
+    justify-content: flex-start;
+}
+html[dir="rtl"] .dropdown-toggle span {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="tel"] {
+    direction: rtl;
+}
+html[dir="rtl"] .dropdown-toggle .bi-chevron-down,
+html[dir="rtl"] .mobile-home-toggle .bi-chevron-down {
+    margin-inline-start: 4px;
+}
+html[dir="rtl"] .contact-item,
+html[dir="rtl"] .step {
+    text-align: right;
+}
+html[dir="rtl"] body[data-page="products"] .page-hero::before,
+html[dir="rtl"] body[data-page="gifts"] .page-hero::before,
+html[dir="rtl"] body[data-page="bulk"] .page-hero::before,
+html[dir="rtl"] body[data-page="contact"] .page-hero::before {
+    background: linear-gradient(
+        270deg,
+        rgba(34, 18, 18, 0.88) 0%,
+        rgba(58, 26, 33, 0.72) 48%,
+        rgba(34, 18, 18, 0.35) 100%
+    );
+}
+html[dir="rtl"] .auth-card,
+html[dir="rtl"] .auth-visual-copy {
+    text-align: right;
+}
+html[dir="rtl"] .password-field .form-control {
+    padding-inline-start: 52px;
+    padding-inline-end: 13px;
+}
+html[dir="rtl"] .password-toggle {
+    inset-inline-start: 5px;
+    inset-inline-end: auto;
+}
+html[dir="rtl"] .check-control {
+    flex-direction: row;
+}
+html[dir="rtl"] .auth-options {
+    direction: rtl;
+}
+
+@media (max-width: 1199px) {
+    html[dir="rtl"] .site-header .mobile-nav {
+        inset: 0 0 0 auto;
+        transform: translateX(100%);
+    }
+
+    html[dir="rtl"] .site-header .mobile-nav.open {
+        transform: translateX(0);
+    }
+}
