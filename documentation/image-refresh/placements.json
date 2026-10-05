@@ -1,0 +1,63 @@
+{
+  "index.html": [
+    null,
+    null,
+    null,
+    "home-laddu",
+    null,
+    "home-sweets-range",
+    "home-bakery-range",
+    "home-chocolates-range",
+    null,
+    "home-story",
+    null,
+    "home-dryfruit-sweet-box",
+    "home-chocolate-hamper",
+    "home-celebration-boxes"
+  ],
+  "index-2.html": [
+    "gifts-hero",
+    "gifts-mithai-range",
+    "gifts-bakery-range",
+    "gifts-boxes-range",
+    "gifts-nuts-range",
+    "gifts-personalised",
+    "gifts-preparation",
+    "gifts-custom-selection",
+    "gifts-corporate",
+    "gifts-visit"
+  ],
+  "about.html": [
+    null,
+    null,
+    "about-selection"
+  ],
+  "bulk-orders.html": [
+    "bulk-packaging"
+  ],
+  "coming-soon.html": [
+    "launch-bakery"
+  ],
+  "festive-gift-boxes.html": [
+    "festive-classic-box",
+    "festive-chocolate-box",
+    "festive-dryfruit-box",
+    "festive-mixed-box",
+    "festive-wedding-box",
+    "festive-corporate-box",
+    "festive-customisation"
+  ],
+  "products.html": [
+    "product-katli",
+    "product-laddu",
+    "product-pastries",
+    "product-bread",
+    "product-pralines",
+    "product-truffles",
+    "product-nuts",
+    "product-nut-box"
+  ],
+  "404.html": [
+    "error-katli"
+  ]
+}

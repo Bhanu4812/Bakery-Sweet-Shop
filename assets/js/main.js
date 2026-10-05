@@ -3,12 +3,19 @@
     const page = document.body?.dataset.page || "";
     const isHome = page === "home1" || page === "home2";
     const active = (name) => (page === name ? " active" : "");
+    const brandMark = /* HTML */ `<span class="brand-mark brand-crest" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+            <circle class="crest-ring" cx="32" cy="32" r="25" />
+            <path class="crest-flourish" d="M16 43c-5-6-6-13-3-20m35 20c5-6 6-13 3-20M13 27l6-3m-6 9 6-1m32-5-6-3m6 9-6-1" />
+            <path class="crest-cake" d="M22 31h20v13H22V31Zm-3 13h26M25 31c0-4 3-7 7-7s7 3 7 7M32 24v-5m-2-2c0-2 2-4 2-4s2 2 2 4c0 1-1 2-2 2s-2-1-2-2ZM22 36c3 2 6 2 10 0 4 2 7 2 10 0" />
+        </svg>
+    </span>`;
     const header = /* HTML */ `<a class="skip-link" href="#main">Skip to content</a>
         <header class="site-header">
             <div class="container nav-wrap">
                 <a class="brand" href="index.html" aria-label="Sweet Crumbs home"
-                    ><span class="brand-mark">SC</span
-                    ><span class="brand-copy"
+                    >${brandMark}
+                    <span class="brand-copy"
                         ><strong>Sweet Crumbs</strong><small>Bakery &amp; Mithai</small></span
                     ></a
                 >
@@ -21,8 +28,8 @@
                             Home <i class="bi bi-chevron-down" aria-hidden="true"></i>
                         </button>
                         <div class="dropdown-menu">
-                            <a href="index.html">Home Page 1</a
-                            ><a href="index-2.html">Home Page 2</a>
+                            <a class="${active("home1")}" href="index.html">Home Page 1</a
+                            ><a class="${active("home2")}" href="index-2.html">Home Page 2</a>
                         </div>
                     </div>
                     <a class="nav-link${active("about")}" href="about.html">About</a
@@ -35,13 +42,16 @@
                 <div class="header-actions">
                     <button class="icon-btn" data-theme-toggle aria-label="Use dark theme">
                         <i class="bi bi-moon" aria-hidden="true"></i></button
+                    ><button class="icon-btn cart-button" data-cart-toggle aria-label="Open cart">
+                        <i class="bi bi-bag" aria-hidden="true"></i>
+                        <span class="cart-count" data-cart-count aria-label="0 items in cart">0</span></button
                     ><button
                         class="icon-btn"
                         data-direction-toggle
                         aria-label="Switch to right-to-left layout"
                     >
                         <i class="bi bi-text-right" aria-hidden="true"></i></button
-                    ><a class="btn btn-primary header-cta" href="login.html">Login</a
+                    ><a class="btn btn-primary header-cta" href="contact.html#custom-order">Custom Order</a
                     ><button
                         class="menu-btn"
                         data-menu
@@ -61,7 +71,7 @@
             >
                 <div class="mobile-nav-header">
                     <a class="brand" href="index.html" aria-label="Sweet Crumbs home">
-                        <span class="brand-mark">SC</span>
+                        ${brandMark}
                         <span class="brand-copy">
                             <strong>Sweet Crumbs</strong>
                             <small>Bakery &amp; Mithai</small>
@@ -114,9 +124,9 @@
                     </a>
                 </div>
                 <div class="mobile-nav-actions">
-                    <a class="btn btn-primary" href="login.html">
-                        <i class="bi bi-person" aria-hidden="true"></i>
-                        <span>Login</span>
+                    <a class="btn btn-primary" href="contact.html#custom-order">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        <span>Custom Order</span>
                     </a>
                 </div>
             </nav>
@@ -131,7 +141,7 @@
         <div class="container footer-grid">
             <div>
                 <a class="brand" href="index.html"
-                    ><span class="brand-mark">SC</span><span>Sweet Crumbs</span></a
+                    >${brandMark}<span>Sweet Crumbs</span></a
                 >
                 <p>Traditional mithai, fresh bakes and thoughtful gifts, handcrafted every day.</p>
                 <div class="social-links">
@@ -203,7 +213,9 @@
     const updateDirectionButtons = () =>
         document.querySelectorAll("[data-direction-toggle]").forEach((button) => {
             const rtl = root.dir === "rtl";
-            button.innerHTML = `<i class="bi ${rtl ? "bi-text-left" : "bi-text-right"}" aria-hidden="true"></i>`;
+            button.innerHTML = `<span class="direction-label" dir="ltr">${rtl ? "LTR" : "RTL"}</span>`;
+            button.setAttribute("title", rtl ? "Use left-to-right layout" : "Use right-to-left layout");
+            button.setAttribute("aria-pressed", String(rtl));
             button.setAttribute(
                 "aria-label",
                 rtl ? "Switch to left-to-right layout" : "Switch to right-to-left layout",
@@ -215,6 +227,71 @@
             root.dir = root.dir === "rtl" ? "ltr" : "rtl";
             localStorage.setItem("sweetcrumbs-direction", root.dir);
             updateDirectionButtons();
+        }),
+    );
+
+    const cartStorageKey = "sweetcrumbs-cart";
+    const getCart = () => {
+        try {
+            const cart = JSON.parse(localStorage.getItem(cartStorageKey) || "[]");
+            return Array.isArray(cart)
+                ? [...new Set(cart.filter((item) => typeof item === "string"))]
+                : [];
+        } catch {
+            return [];
+        }
+    };
+    const updateCartUI = () => {
+        const cart = getCart();
+        const count = cart.length;
+        document.querySelectorAll("[data-cart-count]").forEach((badge) => {
+            badge.textContent = String(count);
+            badge.setAttribute("aria-label", `${count} ${count === 1 ? "item" : "items"} in cart`);
+        });
+        document.querySelectorAll("[data-add-to-cart]").forEach((button) => {
+            const product = button.closest(".product-card")?.querySelector("h2, h3")?.textContent?.trim();
+            const added = product && cart.includes(product);
+            button.classList.toggle("added", Boolean(added));
+            button.setAttribute("aria-pressed", String(Boolean(added)));
+            button.innerHTML = added
+                ? `Added to Cart <i class="bi bi-check-lg" aria-hidden="true"></i>`
+                : `Add to Cart <i class="bi bi-bag-plus" aria-hidden="true"></i>`;
+        });
+    };
+    updateCartUI();
+    document.querySelector("[data-cart-toggle]")?.addEventListener("click", () => {
+        const existingPanel = document.querySelector("[data-cart-panel]");
+        if (existingPanel) {
+            existingPanel.remove();
+            return;
+        }
+        const cart = getCart();
+        const panel = document.createElement("div");
+        panel.className = "cart-panel";
+        panel.dataset.cartPanel = "";
+        panel.innerHTML = `<div class="cart-panel-head"><strong>Your cart</strong><button type="button" data-cart-close aria-label="Close cart"><i class="bi bi-x-lg"></i></button></div>${cart.length ? `<ul>${cart.map((item, index) => `<li><span>${item}</span><button type="button" data-remove-index="${index}" aria-label="Remove ${item}"><i class="bi bi-trash"></i></button></li>`).join("")}</ul>` : "<p>Your cart is empty.</p>"}`;
+        document.querySelector(".site-header")?.append(panel);
+        panel.querySelector("[data-cart-close]")?.addEventListener("click", () => panel.remove());
+        panel.querySelectorAll("[data-remove-index]").forEach((button) =>
+            button.addEventListener("click", () => {
+                const items = getCart();
+                items.splice(Number(button.dataset.removeIndex), 1);
+                localStorage.setItem(cartStorageKey, JSON.stringify(items));
+                updateCartUI();
+                panel.remove();
+            }),
+        );
+    });
+    document.querySelectorAll("[data-add-to-cart]").forEach((button) =>
+        button.addEventListener("click", () => {
+            const product = button.closest(".product-card")?.querySelector("h2, h3")?.textContent?.trim();
+            if (!product) return;
+            const cart = getCart();
+            const existingIndex = cart.indexOf(product);
+            if (existingIndex === -1) cart.push(product);
+            else cart.splice(existingIndex, 1);
+            localStorage.setItem(cartStorageKey, JSON.stringify(cart));
+            updateCartUI();
         }),
     );
 

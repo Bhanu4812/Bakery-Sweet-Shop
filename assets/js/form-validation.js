@@ -8,6 +8,14 @@
         const error = errorFor(form, field);
         if (error) error.textContent = message;
         field.setAttribute("aria-invalid", message ? "true" : "false");
+        const trigger = field.closest(".styled-select")?.querySelector(".styled-select-trigger");
+        if (trigger) {
+            trigger.setAttribute("aria-invalid", message ? "true" : "false");
+            if (error) {
+                error.id = `${field.id}-error`;
+                trigger.setAttribute("aria-describedby", error.id);
+            }
+        }
         return !message;
     };
 

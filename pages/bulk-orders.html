@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Bulk & Corporate Orders | Sweet Crumbs</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/common/favicon.svg" />
         <meta
             name="description"
             content="Plan dependable sweet boxes, bakery treats and customised gifting for companies, weddings and events."
@@ -97,7 +98,7 @@
                     </div>
                     <img
                         class="editorial-img"
-                        src="../assets/images/gift-boxes/festive-collection.webp"
+                        src="../assets/images/unique/bulk-packaging.webp"
                         alt="Bulk gift boxes with custom ribbon"
                     />
                 </div>
@@ -118,7 +119,7 @@
                                 <label for="bulk-name">Full Name</label
                                 ><input
                                     class="form-control"
-                                    id="bulk-name"
+                                    id="bulk-name" placeholder="Enter your full name"
                                     name="name"
                                     required
                                 /><small class="error" data-error="name"></small>
@@ -127,7 +128,7 @@
                                 <label for="bulk-phone">Phone</label
                                 ><input
                                     class="form-control"
-                                    id="bulk-phone"
+                                    id="bulk-phone" placeholder="Enter your phone number"
                                     name="phone"
                                     type="tel"
                                     required
@@ -137,7 +138,7 @@
                                 <label for="bulk-email">Email</label
                                 ><input
                                     class="form-control"
-                                    id="bulk-email"
+                                    id="bulk-email" placeholder="you@example.com"
                                     name="email"
                                     type="email"
                                     required
@@ -151,7 +152,7 @@
                                     name="occasion"
                                     required
                                 >
-                                    <option value="">Select</option>
+                                    <option value="">Select your occasion</option>
                                     <option>Corporate Gifting</option>
                                     <option>Wedding</option>
                                     <option>Festival</option>
@@ -163,7 +164,7 @@
                                 <label for="bulk-qty">Approximate Quantity</label
                                 ><input
                                     class="form-control"
-                                    id="bulk-qty"
+                                    id="bulk-qty" placeholder="e.g. 100"
                                     name="quantity"
                                     type="number"
                                     min="10"
@@ -184,7 +185,7 @@
                                 <label for="bulk-message">Requirements</label
                                 ><textarea
                                     class="form-control"
-                                    id="bulk-message"
+                                    id="bulk-message" placeholder="Tell us about your occasion, preferred items and packaging needs"
                                     name="message"
                                     required
                                 ></textarea
@@ -257,6 +258,7 @@
         </main>
         <div data-site-footer></div>
         <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/styled-select.js"></script>
         <script src="../assets/js/form-validation.js"></script>
     </body>
 </html>

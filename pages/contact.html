@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Contact & Custom Orders | Sweet Crumbs</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/common/favicon.svg" />
         <meta
             name="description"
             content="Contact Sweet Crumbs to plan custom sweets, bakery orders, festive boxes and event gifting."
@@ -82,7 +83,7 @@
                         <div class="form-grid">
                             <div class="field">
                                 <label for="name">Full Name</label
-                                ><input class="form-control" id="name" name="name" required /><small
+                                ><input class="form-control" id="name" placeholder="Enter your full name" name="name" required /><small
                                     class="error"
                                     data-error="name"
                                 ></small>
@@ -91,7 +92,7 @@
                                 <label for="phone">Phone</label
                                 ><input
                                     class="form-control"
-                                    id="phone"
+                                    id="phone" placeholder="Enter your phone number"
                                     name="phone"
                                     type="tel"
                                     required
@@ -101,7 +102,7 @@
                                 <label for="email">Email</label
                                 ><input
                                     class="form-control"
-                                    id="email"
+                                    id="email" placeholder="you@example.com"
                                     name="email"
                                     type="email"
                                     required
@@ -115,7 +116,7 @@
                                     name="orderType"
                                     required
                                 >
-                                    <option value="">Select</option>
+                                    <option value="">Select an order type</option>
                                     <option>Traditional Sweets</option>
                                     <option>Bakery Order</option>
                                     <option>Festive Gift Box</option>
@@ -137,7 +138,7 @@
                                 <label for="quantity">Approximate Quantity</label
                                 ><input
                                     class="form-control"
-                                    id="quantity"
+                                    id="quantity" placeholder="e.g. 2 boxes or 1 kg"
                                     name="quantity"
                                     required
                                 /><small class="error" data-error="quantity"></small>
@@ -146,7 +147,7 @@
                                 <label for="message">Message</label
                                 ><textarea
                                     class="form-control"
-                                    id="message"
+                                    id="message" placeholder="Tell us what you would like to order and any special requests"
                                     name="message"
                                     required
                                 ></textarea
@@ -229,6 +230,7 @@
         </main>
         <div data-site-footer></div>
         <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/styled-select.js"></script>
         <script src="../assets/js/form-validation.js"></script>
     </body>
 </html>

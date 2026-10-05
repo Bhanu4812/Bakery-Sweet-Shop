@@ -146,9 +146,18 @@
     color: #fff;
 }
 [data-theme="dark"] .cta .btn-primary {
-    background: var(--brand-primary);
-    border-color: var(--brand-primary);
-    color: #fff;
+    background: #fff8f1;
+    border-color: #fff8f1;
+    color: #5d1827;
+}
+[data-theme="dark"] .cta .btn-primary:hover {
+    background: #f3dfb7;
+    border-color: #f3dfb7;
+    color: #5d1827;
+}
+[data-theme="dark"] .cta .btn-primary:focus-visible {
+    outline: 3px solid #5d1827;
+    outline-offset: 3px;
 }
 [data-theme="dark"] .cta .btn-secondary {
     color: #fff;
@@ -299,3 +308,36 @@
     background: var(--surface-color);
     border-color: var(--border-color);
 }
+
+[data-theme="dark"] body[data-page="about"] .feature,
+[data-theme="dark"] body[data-page="about"] .step {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+/* Keep product card actions readable on hover and keyboard focus. */
+[data-theme="dark"] body[data-page="products"] .product-card .btn-outline {
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+    background: transparent;
+}
+[data-theme="dark"] body[data-page="products"] .product-card .card-body > :is(a, button):hover,
+[data-theme="dark"] body[data-page="products"] .product-card .card-body > :is(a, button):focus-visible,
+[data-theme="dark"] body[data-page="products"] .product-card .card-body > .added {
+    background: #7a2636;
+    border-color: #d86c82;
+    color: #fff;
+}
+[data-theme="dark"] body[data-page="products"] .product-card .card-body > :is(a, button):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/* Final CTA panels use a white surface with brand-colored actions. */
+[data-theme="dark"] .cta { background: #fff; color: #2d211c; border: 1px solid #e8ddd2; }
+[data-theme="dark"] .cta h2 { color: #2d211c; }
+[data-theme="dark"] .cta p { color: #6c5d55; }
+[data-theme="dark"] .cta .btn-primary { background: #7a2636; border-color: #7a2636; color: #fff; }
+[data-theme="dark"] .cta .btn-primary:hover { background: #5d1827; border-color: #5d1827; color: #fff; }
+[data-theme="dark"] .cta .btn-secondary { background: transparent; border-color: #7a2636; color: #7a2636; }
+[data-theme="dark"] .cta .btn-secondary:hover { background: #7a2636; border-color: #7a2636; color: #fff; }

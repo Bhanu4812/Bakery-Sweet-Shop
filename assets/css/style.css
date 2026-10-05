@@ -102,9 +102,9 @@ p {
     display: inline-block;
     margin-bottom: var(--s1);
     color: var(--primary);
-    font-size: 0.78rem;
+    font-size: 0.7rem;
     font-weight: 800;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 .lead {
@@ -215,9 +215,115 @@ p {
     display: grid;
     place-items: center;
     border-radius: 50% 50% 45% 45%;
+    background: linear-gradient(145deg, #8c2d40, #651827);
+    color: #f7dfa4;
+    border: 1px solid #d9b86c;
+    box-shadow:
+        0 6px 16px color-mix(in srgb, var(--primary) 25%, transparent),
+        inset 0 0 0 2px color-mix(in srgb, #f7dfa4 10%, transparent);
+}
+.brand-mark svg {
+    width: 34px;
+    height: 34px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.brand-mark .crest-ring {
+    opacity: 0.7;
+}
+.brand-mark .crest-flourish {
+    opacity: 0.8;
+}
+.brand-mark .crest-cake {
+    stroke-width: 1.8;
+}
+.home2-testimonials {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 18px;
+}
+.home2-testimonials-section > .container {
+    width: min(calc(100% - 64px), 1800px);
+}
+.home2-testimonials .testimonial-card {
+    min-height: 220px;
+    margin: 0;
+    padding: 28px 32px;
+}
+.home2-testimonials .testimonial-text {
+    margin-block-end: 28px;
+}
+.home2-testimonials .testimonial-author {
+    margin-block-start: auto;
+}
+.dropdown-menu a.active {
+    color: var(--primary);
+    background: var(--soft);
+    font-weight: 750;
+}
+.cart-button { position: relative; }
+.cart-count {
+    position: absolute;
+    inset-block-start: -5px;
+    inset-inline-end: -6px;
+    min-width: 18px;
+    height: 18px;
+    padding-inline: 4px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--bg);
+    border-radius: 999px;
     background: var(--primary);
     color: #fff;
-    font-family: var(--font-head);
+    font-size: .65rem;
+    font-weight: 800;
+}
+.cart-panel {
+    position: absolute;
+    inset-block-start: calc(100% + 8px);
+    inset-inline-end: max(20px, calc((100% - var(--container)) / 2));
+    width: min(340px, calc(100vw - 32px));
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.cart-panel-head,
+.cart-panel li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.cart-panel-head { margin-block-end: 14px; }
+.cart-panel button {
+    border: 0;
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+.cart-panel ul {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cart-panel li {
+    padding-block: 8px;
+    border-block-end: 1px solid var(--border);
+}
+[data-add-to-cart].added {
+    background: var(--primary);
+    color: #fff;
+}
+.product-card .card-body > [data-add-to-cart] {
+    width: 100%;
+    min-height: 48px;
+    margin-block-start: auto;
 }
 .desktop-nav {
     display: flex;
@@ -586,7 +692,7 @@ p {
     display: block;
     margin-bottom: 7px;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .form-control {
     width: 100%;
@@ -1634,3 +1740,110 @@ textarea {
         transition: none;
     }
 }
+
+/* Compact labels and consistent display controls across every page. */
+.container .tag { font-size: 0.7rem; }
+.container label { font-size: 0.8rem; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0; line-height: 1; flex-shrink: 0; }
+.icon-btn > .bi { display: inline-flex; font-size: 18px; line-height: 1; }
+.direction-icon { display: block; width: 18px; height: 18px; flex-shrink: 0; }
+.header-actions .header-cta { white-space: nowrap; padding-inline: 16px; }
+
+/* Readable layout direction names within the shared control. */
+[data-direction-toggle] .direction-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+/* Keep wrapped titles and descriptions aligned within each card row. */
+.home-specials-grid .card-body { text-align: start; }
+.home-specials-grid .tag { align-self: flex-start; }
+@media (min-width: 561px) {
+    .home-specials-grid > .card {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+    .home-specials-grid .card-body {
+        display: grid;
+        grid-row: span 4;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+    .home-specials-grid .tag { justify-self: start; align-self: start; }
+    .home-specials-grid .card-body > a { align-self: end; margin-top: 0; }
+    .grid-4 > .feature {
+        display: grid;
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        text-align: start;
+    }
+    .steps.grid-4 > .step {
+        display: grid;
+        grid-row: span 2;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        text-align: start;
+    }
+}
+
+/* Enclose the About values and preparation steps in individual cards. */
+body[data-page="about"] .feature,
+body[data-page="about"] .step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(74, 42, 27, 0.045);
+}
+body[data-page="about"] .step {
+    padding-block-start: 82px;
+}
+body[data-page="about"] .step::before {
+    inset-block-start: 24px;
+    inset-inline-start: 24px;
+}
+body[data-page="about"] .feature p,
+body[data-page="about"] .step p {
+    margin-bottom: 0;
+}
+
+/* Compact category labels instead of full-width bars. */
+.popular-picks-grid .tag,
+body[data-page="products"] .card-body .tag {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    line-height: 1.4;
+}
+/* Center the image-banner copy and breadcrumb on the inner pages. */
+body:is([data-page="products"], [data-page="gifts"], [data-page="bulk"], [data-page="contact"]) .page-hero .container {
+    text-align: center;
+}
+body:is([data-page="products"], [data-page="gifts"], [data-page="bulk"], [data-page="contact"]) .page-hero h1,
+body:is([data-page="products"], [data-page="gifts"], [data-page="bulk"], [data-page="contact"]) .page-hero p {
+    margin-inline: auto;
+}
+body:is([data-page="products"], [data-page="gifts"], [data-page="bulk"], [data-page="contact"]) .page-hero .breadcrumb {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Brand-colored form dropdowns, including the option highlight. */
+.form-card:has(.styled-select) { overflow: visible; }
+.styled-select { position: relative; }
+.styled-select-native { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; clip-path: inset(50%); overflow: hidden; opacity: 0; pointer-events: none; }
+.styled-select-trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: start; cursor: pointer; }
+.styled-select-trigger::after { content: ""; width: 8px; height: 8px; border-inline-end: 2px solid currentColor; border-block-end: 2px solid currentColor; transform: rotate(45deg); flex-shrink: 0; margin: 0 3px 4px; }
+.styled-select-trigger[aria-expanded="true"]::after { transform: rotate(225deg); margin-bottom: -4px; }
+.styled-select-options { position: absolute; inset-inline: 0; inset-block-start: calc(100% + 6px); z-index: 20; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 6px; max-height: 280px; overflow-y: auto; box-shadow: var(--shadow); }
+.styled-select-options[hidden] { display: none; }
+.styled-select-option { padding: 10px 12px; border-radius: 6px; cursor: pointer; color: var(--text); }
+.styled-select-option:is(:hover, .is-active) { background: #7a2636; color: #fff; }
