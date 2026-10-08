@@ -1,3 +1,134 @@
+/* Share title and description tracks so wrapped headings do not stagger copy. */
+@media (min-width: 561px) {
+    main#main .section .grid > .card:has(> .card-body) {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+
+    main#main .section .grid > .card > .card-body,
+    main#main .section .grid > .card.card-body {
+        display: grid;
+        grid-row: span 4;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+
+    main#main .section .grid > .card > .card-body > .tag,
+    main#main .section .grid > .card.card-body > .tag {
+        grid-row: 1;
+        align-self: start;
+    }
+
+    main#main .section .grid > .card > .card-body > :is(h2, h3),
+    main#main .section .grid > .card.card-body > :is(h2, h3) {
+        grid-row: 2;
+    }
+
+    main#main .section .grid > .card > .card-body > p,
+    main#main .section .grid > .card.card-body > p {
+        grid-row: 3;
+    }
+
+    main#main .section .grid > .card > .card-body > :is(a, button),
+    main#main .section .grid > .card.card-body > :is(a, button) {
+        grid-row: 4;
+        align-self: end;
+        margin-top: 0;
+    }
+
+    main#main .section .grid > .feature {
+        display: grid;
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+
+    main#main .section .grid > .feature > .feature-icon { grid-row: 1; }
+    main#main .section .grid > .feature > h3 { grid-row: 2; }
+    main#main .section .grid > .feature > p { grid-row: 3; }
+
+    main#main .section .steps > .step {
+        display: grid;
+        grid-row: span 2;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+}
+
+/* Consistent content alignment for every page section, at every viewport size. */
+main#main .section,
+main#main .hero,
+main#main .page-hero,
+main#main .section .card-body,
+main#main .section .feature,
+main#main .section .step,
+main#main .section .contact-item,
+main#main .section .newsletter-field {
+    text-align: center;
+}
+
+main#main .section .lead,
+main#main .hero .lead,
+main#main .page-hero .lead,
+main#main .section .newsletter,
+main#main .section .feature-icon,
+main#main .section .card-body > a,
+main#main .section .card-body .tag {
+    margin-inline: auto;
+}
+
+main#main .section .card-body .tag {
+    align-self: center;
+    justify-self: center;
+}
+
+main#main .button-row,
+main#main .proofs,
+main#main .filter-bar,
+main#main .breadcrumb,
+main#main .testimonial-author {
+    justify-content: center;
+}
+
+main#main .section .cta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main#main .section .step {
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 58px;
+}
+
+main#main .section .step::before {
+    inset-block-start: 0;
+    inset-inline-start: calc(50% - 21px);
+}
+
+body[data-page="about"] main#main .section .step {
+    padding-block-start: 82px;
+}
+
+body[data-page="about"] main#main .section .step::before {
+    inset-block-start: 24px;
+}
+
+main#main .section .contact-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0;
+}
+
+main#main .section .accordion-button {
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+}
+
 @media (max-width: 1199px) {
     .site-header .desktop-nav,
     .site-header .header-cta {

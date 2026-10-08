@@ -93,6 +93,8 @@ p {
 .section-header {
     max-width: 690px;
     margin-bottom: var(--s5);
+    margin-inline: auto;
+    text-align: center;
 }
 .section-header.center {
     text-align: center;
@@ -1815,6 +1817,7 @@ body[data-page="about"] .step p {
 
 /* Compact category labels instead of full-width bars. */
 .popular-picks-grid .tag,
+body[data-page="gifts"] .card-body .tag,
 body[data-page="products"] .card-body .tag {
     align-self: flex-start;
     width: fit-content;
